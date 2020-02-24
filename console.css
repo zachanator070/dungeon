@@ -1,0 +1,88 @@
+
+body{
+  background-color: black;
+}
+
+#anchor{
+  width: 1024px;
+  height: 825px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#console:focus {
+  outline: 0;
+}
+
+#screen{
+  background-image: url('images/terminal.png');
+  position: absolute;
+  width: 1024px;
+  height: 825px;
+  background-size: contain;
+  z-index:-1;
+}
+
+#console{
+  width: 1024px;
+  white-space:pre;
+  font-family: VT323;
+  background-color: black;
+  color: rgb(102, 255, 51);
+  font-size: 30px;
+  position: absolute;
+  padding-left: 135px;
+  padding-top: 85px;
+  z-index:-2;
+}
+
+  @font-face{
+    font-family:ArcadeClassic;
+    src: url("fonts/ARCADECLASSIC.TTF");
+  }
+
+  @font-face {
+    font-family: DotMatri;
+    src: url("fonts/DOTMATRI.TTF")
+  }
+
+  @font-face {
+    font-family: DotmBold;
+    src: url("fonts/DOTMBold.TTF")
+  }
+
+.header{
+  font-family:ArcadeClassic;
+  color:white;
+  height:80px;
+  width: 300px;
+  font-size:80px;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:50px;
+}
+
+.footer{
+  font-family:DotMatri;
+  font-size:30px;
+  font-weight: normal;
+  margin-top:50px;
+  background-image: url('images/paper.png');
+  background-size: cover;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 50px;
+}
+
+.paperTitle{
+  font-family:DotmBold;
+  font-size: 51px;
+  margin: 0 0 33px;
+}
+
+p{
+  font-size: 26px;
+  margin: 0 0 33px;
+}

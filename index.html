@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <!-- bootstrap jquery and bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- my fonts, css, and js -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Orbitron|Press+Start+2P|VT323" rel="stylesheet">
+    <script language='javascript' src='console.js' ></script>
+    <script language='javascript' src='parse.js'></script>
+    <script language='javascript' src='rooms.js'></script>
+    <script language='javascript' src='command.js'></script>
+    <link rel='stylesheet' href='console.css' type="text/css">
+  </head>
+
+  <body class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='header'>Dungeon</div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+
+        <div id='anchor' onclick='selectConsole()'>
+          <div id='console' onkeydown='addChar(event)' tabindex="1"></div>
+          <div id='screen'></div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-md-12 '>
+        <div class='footer'>
+          <p class='paperTitle'>Welcome to the Dungeon</p>
+          <p>
+            You find yourself in a dark dank dungeon. See if you can find your way out.
+          </p>
+          <p>
+            Lost and confused? Typing 'help' is good starting point to get a list of
+            some commands. Please note that this is not an extensive list of ALL commands.
+            The dungeon will require you to get a little creative.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // display initial prompt
+      updateConsole();
+
+      // make our cursor blink
+      window.setInterval(function(){
+        if(playing){
+            blink();
+        }
+      }, 500);
+
+      // disable spacebar functionality for firefox
+      window.onkeydown = function(e) {
+        return !(e.keyCode == 32);
+      };
+    </script>
+  </body>
+
+</html>
